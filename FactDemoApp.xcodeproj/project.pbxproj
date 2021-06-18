@@ -70,6 +70,7 @@
 		3EA6B59E267C9C85006BB951 /* FactDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				3EA6B5E6267CBDF5006BB951 /* Service */,
 				3EA6B5E1267CB1D9006BB951 /* ViewModel */,
 				3EA6B5CE267CA555006BB951 /* View */,
 				3EA6B5CA267CA514006BB951 /* Model */,
@@ -80,7 +81,6 @@
 				3EA6B5A8267C9C86006BB951 /* Assets.xcassets */,
 				3EA6B5AA267C9C86006BB951 /* LaunchScreen.storyboard */,
 				3EA6B5AD267C9C86006BB951 /* Info.plist */,
-				3EA6B5DE267CA831006BB951 /* APIService.swift */,
 			);
 			path = FactDemoApp;
 			sourceTree = "<group>";
@@ -110,6 +110,14 @@
 				3EA6B5E2267CB1F1006BB951 /* FactViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3EA6B5E6267CBDF5006BB951 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3EA6B5DE267CA831006BB951 /* APIService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

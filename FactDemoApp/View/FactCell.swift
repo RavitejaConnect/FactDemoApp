@@ -23,7 +23,6 @@ class FactCell: UITableViewCell {
         self.cellContainerView.layer.cornerRadius = 10
         self.cellContainerView.layer.borderWidth = 0.5
         self.cellContainerView.layer.borderColor = UIColor.lightGray.cgColor
-
         self.cellContainerView.clipsToBounds = true;
     }
 

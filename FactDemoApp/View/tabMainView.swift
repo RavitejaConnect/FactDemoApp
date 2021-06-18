@@ -59,8 +59,10 @@ class tabMainView: UIView {
     
     func reloadDetails(FactRows :[FactRows],title : String)  {
         rows=FactRows
-        self.title.text = title
-        self.tabularView .reloadData()
+        DispatchQueue.main.async {
+            self.title.text = title
+            self.tabularView .reloadData()
+        }
     }
 }
 extension String {

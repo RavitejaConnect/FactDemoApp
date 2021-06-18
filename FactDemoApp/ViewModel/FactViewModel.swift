@@ -8,24 +8,20 @@
 import UIKit
 
 class FactViewModel: NSObject {
-    
-
     private var apiService : APIService!
         private(set) var factData : Fact! {
             didSet {
                 self.bindFactViewModelToController()
             }
         }
-        
         var bindFactViewModelToController : (() -> ()) = {}
         
         override init() {
             super.init()
             self.apiService =  APIService()
-            callFuncToGetEmpData()
+            callFuncToGetFactData()
         }
-        
-        func callFuncToGetEmpData() {
+        func callFuncToGetFactData() {
             self.apiService.apiToGetFactData { (factData) in
                 self.factData = factData
             }

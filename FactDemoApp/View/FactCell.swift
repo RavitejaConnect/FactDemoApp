@@ -10,7 +10,8 @@ import UIKit
 
 class FactCell: UITableViewCell {
 
-    @IBOutlet weak var cellContainer: UIView!
+
+    @IBOutlet weak var cellContainerView: UIView!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageViewObj: UIImageView!
@@ -19,11 +20,11 @@ class FactCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        self.cellContainer.layer.cornerRadius = 10
-        self.cellContainer.layer.borderWidth = 0.5
-        self.cellContainer.layer.borderColor = UIColor.lightGray.cgColor
+        self.cellContainerView.layer.cornerRadius = 10
+        self.cellContainerView.layer.borderWidth = 0.5
+        self.cellContainerView.layer.borderColor = UIColor.lightGray.cgColor
 
-        self.cellContainer.clipsToBounds = true;
+        self.cellContainerView.clipsToBounds = true;
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

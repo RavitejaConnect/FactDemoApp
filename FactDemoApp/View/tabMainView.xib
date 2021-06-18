@@ -7,9 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="tabMainView" customModule="JsonparserDemoApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="tabMainView" customModule="FactDemoApp" customModuleProvider="target">
             <connections>
                 <outlet property="tabularView" destination="f0W-QN-X5M" id="plB-y0-9jN"/>
+                <outlet property="title" destination="2LA-65-NPn" id="9ay-f6-ur2"/>
                 <outlet property="view" destination="iN0-l3-epB" id="jHs-n1-jnk"/>
             </connections>
         </placeholder>
@@ -19,20 +20,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f0W-QN-X5M">
-                    <rect key="frame" x="0.0" y="0.0" width="484" height="596"/>
+                    <rect key="frame" x="2" y="32" width="480" height="562"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="ZRN-y1-Swf"/>
                         <outlet property="delegate" destination="-1" id="MCm-cg-VHf"/>
                     </connections>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LA-65-NPn">
+                    <rect key="frame" x="10" y="2" width="464" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="pbx-S8-Cfj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="f0W-QN-X5M" secondAttribute="trailing" id="bqR-X3-jJU"/>
-                <constraint firstItem="f0W-QN-X5M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="d3V-bn-H1Y"/>
-                <constraint firstItem="f0W-QN-X5M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hCe-QQ-V1U"/>
-                <constraint firstAttribute="bottom" secondItem="f0W-QN-X5M" secondAttribute="bottom" id="jZd-UU-9F5"/>
+                <constraint firstItem="f0W-QN-X5M" firstAttribute="top" secondItem="2LA-65-NPn" secondAttribute="bottom" constant="5" id="3Ag-re-IZy"/>
+                <constraint firstItem="2LA-65-NPn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="7L8-at-cDa"/>
+                <constraint firstAttribute="trailing" secondItem="f0W-QN-X5M" secondAttribute="trailing" constant="2" id="8P5-kF-6Dh"/>
+                <constraint firstItem="2LA-65-NPn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="EVb-wu-Wls"/>
+                <constraint firstItem="f0W-QN-X5M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="mnN-eM-Uyw"/>
+                <constraint firstAttribute="trailing" secondItem="2LA-65-NPn" secondAttribute="trailing" constant="10" id="rji-E1-U3z"/>
+                <constraint firstAttribute="bottom" secondItem="f0W-QN-X5M" secondAttribute="bottom" constant="2" id="z6B-9V-DZp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="292.75362318840581" y="-35.491071428571423"/>

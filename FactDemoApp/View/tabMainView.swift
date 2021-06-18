@@ -12,6 +12,7 @@ class tabMainView: UIView {
     @IBOutlet weak var tabularView: UITableView!
     @IBOutlet weak var view: UIView!
     var rows : [FactRows]! = []
+    @IBOutlet weak var title: UILabel!
     
     // MARK: - Constants
     let imageCache = NSCache<NSString, AnyObject>()
@@ -45,6 +46,8 @@ class tabMainView: UIView {
         tabularView.register(UINib(nibName: "FactCell", bundle: Bundle.main), forCellReuseIdentifier: "FactCell")
         tabularView.delegate = self
         tabularView.dataSource = self
+        tabularView.rowHeight = UITableView.automaticDimension
+        tabularView.estimatedRowHeight = 250
         
     }
     private func loadViewFromNib() -> UIView {
@@ -54,8 +57,9 @@ class tabMainView: UIView {
         return nibView
     }
     
-    func reloadDetails(FactRows :[FactRows])  {
+    func reloadDetails(FactRows :[FactRows],title : String)  {
         rows=FactRows
+        self.title.text = title
         self.tabularView .reloadData()
     }
 }
@@ -79,11 +83,16 @@ extension tabMainView :UITableViewDataSource,UITableViewDelegate
         let cell = tableView.dequeueReusableCell(withIdentifier: "FactCell", for: indexPath) as! FactCell
         cell.selectionStyle = .none
         let cellData = rows[indexPath.row]
-        cell.titleLabel.text=cellData.title;
+        cell.titleLabel.text=cellData.title ?? "NA";
+        cell.descLabel.text=cellData.description ?? "NA";
         let imageUrlStr = cellData.imageHref ?? ""
         cell.imageViewObj .downloadImageFrom(urlString: imageUrlStr, imageMode:.scaleAspectFit)
         return cell
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150;
+    }
+   
     
 }
 
